@@ -5,8 +5,7 @@ import { AppComponent } from './app.component';
 import { TextAreaComponent } from './examples/text-area.component';
 import { FontSizeComponent } from './examples/font-size.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CustomComponent } from './examples/custom.component';
-import { GreenComponent } from './examples/green.component';
+import { DirectiveRefComponent } from './examples/directive-ref.component';
 import { BlueDirective } from './examples/blue.directive';
 import { ClickDirective } from './examples/click.directive';
 import { FontSizeRefComponent } from './examples/font-size-ref.component';
@@ -16,10 +15,9 @@ import { FontSizeRefComponent } from './examples/font-size-ref.component';
     AppComponent,
     BlueDirective,
     ClickDirective,
-    CustomComponent,
+    DirectiveRefComponent,
     FontSizeComponent,
     FontSizeRefComponent,
-    GreenComponent,
     TextAreaComponent,
   ],
   imports: [

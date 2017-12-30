@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TextAreaComponent } from './examples/text-area.component';
 import { FontSizeComponent } from './examples/font-size.component';
-import { CustomComponent } from './examples/custom.component';
+import { DirectiveRefComponent } from './examples/directive-ref.component';
 import { FontSizeRefComponent } from './examples/font-size-ref.component';
 
 const routes: Routes = [
@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'text-area', component: TextAreaComponent},
   {path: 'font-size', component: FontSizeComponent},
   {path: 'font-size-ref', component: FontSizeRefComponent},
-  {path: 'custom', component: CustomComponent},
+  {path: 'directive-ref', component: DirectiveRefComponent},
 ];
 
 @NgModule({

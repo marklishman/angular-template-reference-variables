@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-custom',
+  selector: 'app-directive-ref',
   template: `
     <p appBlue>
       Some blue text using the appBlue directive
@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
     <article appBlue
              ref-b="appBlue"
              ref-el>
-      {{b.message}} and is inside {{el.tagName}} tags
+      {{b.aMethod()}} and is inside {{el.tagName}} tags
     </article>
 
     <p appBlue #blue="appBlue"
@@ -26,5 +26,5 @@ import { Component } from '@angular/core';
     <button (click)="clicker.reset()">Reset</button>
   `
 })
-export class CustomComponent {
+export class DirectiveRefComponent {
 }
