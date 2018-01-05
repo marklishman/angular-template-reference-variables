@@ -1,13 +1,15 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { TextAreaComponent } from './examples/text-area.component';
-import { FontSizeComponent } from './examples/font-size.component';
-import { DirectiveRefComponent } from './examples/directive-ref.component';
-import { FontSizeRefComponent } from './examples/font-size-ref.component';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+import {TextAreaOneComponent} from './examples/text-area-one.component';
+import {FontSizeComponent} from './examples/font-size.component';
+import {DirectiveRefComponent} from './examples/directive-ref.component';
+import {FontSizeRefComponent} from './examples/font-size-ref.component';
+import {TextAreaTwoComponent} from './examples/text-area-two.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/text-area', pathMatch: 'full'},
-  {path: 'text-area', component: TextAreaComponent},
+  {path: '', redirectTo: '/text-area-one', pathMatch: 'full'},
+  {path: 'text-area-one', component: TextAreaOneComponent},
+  {path: 'text-area-two', component: TextAreaTwoComponent},
   {path: 'font-size', component: FontSizeComponent},
   {path: 'font-size-ref', component: FontSizeRefComponent},
   {path: 'directive-ref', component: DirectiveRefComponent},
@@ -17,4 +19,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
