@@ -5,6 +5,7 @@ import {FontSizeComponent} from './examples/font-size.component';
 import {DirectiveRefComponent} from './examples/directive-ref.component';
 import {FontSizeRefComponent} from './examples/font-size-ref.component';
 import {TextAreaTwoComponent} from './examples/text-area-two.component';
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 const routes: Routes = [
   {path: '', redirectTo: '/text-area-one', pathMatch: 'full'},
@@ -17,7 +18,10 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+  ]
 })
 export class AppRoutingModule {
 }
