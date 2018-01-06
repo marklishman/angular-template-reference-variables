@@ -3,16 +3,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-text-area-two',
   template: `
-    <label>
-      <input ref-isReadOnly type="checkbox" (change)="0">
-      Read only
-    </label>
-    <p>
+    <div>
       <textarea #textArea
                 [readonly]="isReadOnly.checked"
                 cols="25"
                 rows="3">one two three four</textarea>
-    </p>
+    </div>
+    <label>
+      <input ref-isReadOnly type="checkbox" (change)="0">
+      Read only
+    </label>
     <p>
       <button (click)="logMessage(textArea, isReadOnly)">Message</button>
     </p>
