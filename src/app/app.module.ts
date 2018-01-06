@@ -11,6 +11,7 @@ import { ClickDirective } from './examples/click.directive';
 import { FontSizeRefComponent } from './examples/font-size-ref.component';
 import { TextAreaTwoComponent } from './examples/text-area-two.component';
 import { TextAreaThreeComponent } from './examples/text-area-three.component';
+import { ConditionalComponent } from './examples/conditional.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TextAreaThreeComponent } from './examples/text-area-three.component';
     TextAreaOneComponent,
     TextAreaThreeComponent,
     TextAreaTwoComponent,
+    ConditionalComponent,
   ],
   imports: [
     AppRoutingModule,
