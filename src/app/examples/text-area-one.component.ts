@@ -4,7 +4,11 @@ import { Component } from '@angular/core';
   selector: 'app-text-area-one',
   template: `
     <p>
-      <textarea #refVar (keyup)="0" (select)="0">Change or highlight some of this text</textarea>
+      <textarea #refVar
+                (keyup)="0"
+                (select)="0"
+                cols="25"
+                rows="3">Change or highlight some of this text</textarea>
     </p>
     <div>textLength: {{refVar.textLength}}</div>
     <div>selectionStart: {{refVar.selectionStart}}</div>

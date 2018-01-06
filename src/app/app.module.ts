@@ -9,7 +9,8 @@ import { DirectiveRefComponent } from './examples/directive-ref.component';
 import { BlueDirective } from './examples/blue.directive';
 import { ClickDirective } from './examples/click.directive';
 import { FontSizeRefComponent } from './examples/font-size-ref.component';
-import {TextAreaTwoComponent} from './examples/text-area-two.component';
+import { TextAreaTwoComponent } from './examples/text-area-two.component';
+import { TextAreaThreeComponent } from './examples/text-area-three.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {TextAreaTwoComponent} from './examples/text-area-two.component';
     FontSizeComponent,
     FontSizeRefComponent,
     TextAreaOneComponent,
+    TextAreaThreeComponent,
     TextAreaTwoComponent,
   ],
   imports: [
