@@ -12,23 +12,29 @@ import { FontSizeRefComponent } from './examples/font-size-ref.component';
 import { TextAreaTwoComponent } from './examples/text-area-two.component';
 import { TextAreaThreeComponent } from './examples/text-area-three.component';
 import { ConditionalComponent } from './examples/conditional.component';
+import { StopwatchComponent } from './examples/stopwatch.component';
+import { StopwatchParentComponent } from './examples/stopwatch-parent.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlueDirective,
     ClickDirective,
+    ConditionalComponent,
     DirectiveRefComponent,
     FontSizeComponent,
     FontSizeRefComponent,
+    StopwatchComponent,
+    StopwatchParentComponent,
     TextAreaOneComponent,
     TextAreaThreeComponent,
     TextAreaTwoComponent,
-    ConditionalComponent,
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
