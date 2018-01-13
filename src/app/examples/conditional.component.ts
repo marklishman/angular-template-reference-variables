@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     <p #para *ngIf="true">
       Some text
     </p>
-    #para === undefined: {{para === undefined}}
+    <!--#para === undefined: {{para === undefined}}-->
   `,
 })
 export class ConditionalComponent {

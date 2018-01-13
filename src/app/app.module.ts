@@ -15,6 +15,7 @@ import { ConditionalComponent } from './examples/conditional.component';
 import { TimerComponent } from './examples/timer.component';
 import { StopwatchComponent } from './examples/stopwatch.component';
 import { FormsModule } from '@angular/forms';
+import { TypingTestComponent } from './examples/typing-test.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FormsModule } from '@angular/forms';
     TextAreaThreeComponent,
     TextAreaTwoComponent,
     TimerComponent,
+    TypingTestComponent,
   ],
   imports: [
     AppRoutingModule,

@@ -9,6 +9,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { TextAreaThreeComponent } from './examples/text-area-three.component';
 import { ConditionalComponent } from './examples/conditional.component';
 import { StopwatchComponent } from './examples/stopwatch.component';
+import { TypingTestComponent } from './examples/typing-test.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/text-area-one', pathMatch: 'full'},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'text-area-three', component: TextAreaThreeComponent},
   {path: 'conditional', component: ConditionalComponent},
   {path: 'stopwatch', component: StopwatchComponent},
+  {path: 'typing-test', component: TypingTestComponent},
   {path: 'font-size', component: FontSizeComponent},
   {path: 'font-size-ref', component: FontSizeRefComponent},
   {path: 'directive-ref', component: DirectiveRefComponent},
