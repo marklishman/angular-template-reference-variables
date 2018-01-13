@@ -3,48 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-stopwatch',
   template: `
-    <h1>
-      {{elapsedTime | date:'HH:mm:ss'}}
-      <span class="half-size">{{elapsedTime | date:'S'}}</span>
-    </h1>
+    <app-timer #timer></app-timer>
+    <button (click)="timer.start()" [disabled]="timer.isTimeSet">Start</button>
+    <button (click)="timer.stop()" [disabled]="!timer.isRunning">Stop</button>
+    <button (click)="timer.reset()" [disabled]="!timer.isTimeSet">Reset</button>
   `
 })
 export class StopwatchComponent {
-  private totalMillis = 0;
-  private intervalId: number = null;
-
-  get elapsedTime(): Date {
-    return new Date(this.totalMillis);
-  }
-
-  get isRunning(): number {
-    return this.intervalId;
-  }
-
-  get isTimeSet(): number {
-    return this.totalMillis;
-  }
-
-  start(): void {
-    const startMillis = this.nowMillis;
-    this.intervalId = window.setInterval(() => {
-      this.totalMillis = this.nowMillis - startMillis;
-    }, 100);
-  }
-
-  stop(): void {
-    if (this.intervalId) {
-      clearInterval(this.intervalId);
-      this.intervalId = null;
-    }
-  }
-
-  reset(): void {
-    this.stop();
-    this.totalMillis = 0;
-  }
-
-  private get nowMillis(): number {
-    return new Date().getTime();
-  }
 }
