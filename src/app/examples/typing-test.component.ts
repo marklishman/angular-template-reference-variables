@@ -8,6 +8,7 @@ import { TimerComponent } from './timer.component';
     <textarea #answer
       (keydown)="timer.isRunning || timer.start()"
       (keyup)="checkAnswer(answer.value, timer)"
+      placeholder="Type the phrase here"
       cols="50" rows="5"></textarea>
     <div>
       <button (click)="answer.value=''; next()">Next</button>
