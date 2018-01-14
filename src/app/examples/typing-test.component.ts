@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TimerComponent } from './timer.component';
 
 @Component({
   selector: 'app-typing-test',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
     <h2 #text>{{phrase}}</h2>
     <textarea #answer
       (keydown)="timer.isRunning || timer.start()"
-      (keyup)="answer.value === text.innerText && timer.stop()"
+      (keyup)="checkAnswer(answer.value, timer)"
       cols="50" rows="5"></textarea>
     <div>
       <button (click)="answer.value=''; next()">Next</button>
@@ -18,14 +19,20 @@ import { Component } from '@angular/core';
 })
 export class TypingTestComponent {
   private phrases: string[] = [
-    'Beware the moon.',
     'We\'re gonna need a bigger boat.',
+    'What doesn\'t kill you makes you stranger.',
     'The first rule of project mayhem is you do not ask questions.',
-    'I want you to hit me as hard as you can.',
+    'As far back as I can remember, I always wanted to be a gangster.',
     'I want you to deal with your problems by becoming rich!'
   ];
 
   private position = 0;
+
+  checkAnswer(answer: string, timer: TimerComponent): void {
+    if (answer === this.phrase) {
+      timer.stop();
+    }
+  }
 
   next(): void {
     this.position = this.position === this.phrases.length - 1 ? 0 : this.position + 1;
