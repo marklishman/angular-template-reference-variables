@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-text-area-two',
   template: `
+    <header>Use the checkboxto make the text area editable or read only.</header>
     <div>
       <textarea #textArea
                 [readonly]="isReadOnly.checked"

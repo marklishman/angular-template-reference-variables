@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-text-area-one',
   template: `
+    <header>Change or highlight the text below to see the values change.</header>
     <p>
       <textarea #refVar
                 (keyup)="0"

@@ -4,6 +4,7 @@ import { TimerComponent } from './timer.component';
 @Component({
   selector: 'app-typing-test',
   template: `
+    <header>Type the movie quote in the box as fast as you can.</header>
     <h2 #text>{{phrase}}</h2>
     <textarea #answer
       (keydown)="timer.isRunning || timer.start()"

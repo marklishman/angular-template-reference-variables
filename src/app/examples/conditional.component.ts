@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-conditional',
   template: `
     <p #para *ngIf="true">
-      Some text
+      This is displayed because ngIf is true
     </p>
-    <!--#para === undefined: {{para === undefined}}-->
+    but #para is still undefined: {{para === undefined}}
   `,
 })
 export class ConditionalComponent {
